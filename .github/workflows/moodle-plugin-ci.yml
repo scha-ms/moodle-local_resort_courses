@@ -14,6 +14,6 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: moodle-an-hochschulen/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@main
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@deduplicate-run-verify
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
