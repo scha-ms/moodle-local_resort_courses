@@ -1,4 +1,4 @@
-moodle-local_resort_courses (CI Test Text)
+moodle-local_resort_courses (CI Test Text2)
 ===========================
 
 [![Moodle Plugin CI](https://github.com/moodle-an-hochschulen/moodle-local_resort_courses/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=main)](https://github.com/moodle-an-hochschulen/moodle-local_resort_courses/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amain)
