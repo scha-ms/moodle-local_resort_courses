@@ -12,6 +12,6 @@
 
   jobs:
     release:
-      uses: moodle-an-hochschulen/moodle-workflows/.github/workflows/moodle-release.yml@main
+      uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@cancel-jobs-same-codebase
       secrets:
         MOODLE_ORG_TOKEN: ${{ secrets.MOODLE_ORG_TOKEN }}
