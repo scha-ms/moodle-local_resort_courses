@@ -2,8 +2,8 @@
 
   on:
     push:
-      tags:
-        - v*
+      branches: ['**']
+      tags-ignore: ['**']
     workflow_dispatch:
       inputs:
         tag:
