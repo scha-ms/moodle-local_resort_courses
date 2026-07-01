@@ -1,4 +1,4 @@
-Upgrading this plugin
+Upgrading this plugin (Test 1: create branch + 1 commit) 
 =====================
 
 This is an internal documentation for plugin developers with some notes what has to be considered when updating this plugin to a new Moodle major version.
