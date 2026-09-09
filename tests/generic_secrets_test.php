@@ -35,29 +35,17 @@ final class generic_secrets_test extends \advanced_testcase {
      * Ensure all four generic secret environment variables are set and non-empty.
      */
     public function test_generic_secrets_are_available_in_runtime(): void {
-        $keys = [
-            'GENERIC_USERNAME_1',
-            'GENERIC_PASSWORD_1',
-            'GENERIC_USERNAME_2',
-            'GENERIC_PASSWORD_2',
+        $expected = [
+            'GENERIC_USERNAME_1' => 'ci-test-user-1',
+            'GENERIC_PASSWORD_1' => 'ci-test-pass-1',
+            'GENERIC_USERNAME_2' => 'ci-test-user-2',
+            'GENERIC_PASSWORD_2' => 'ci-test-pass-2',
         ];
 
-        $missing = [];
-        foreach ($keys as $key) {
+        foreach ($expected as $key => $want) {
             $value = getenv($key);
-            if ($value === false || $value === '') {
-                $missing[] = $key;
-            }
-        }
-
-        if ($missing !== []) {
-            $this->markTestSkipped(
-                'Repo Actions secrets not configured yet: ' . implode(', ', $missing)
-            );
-        }
-
-        foreach ($keys as $key) {
-            $this->assertNotSame('', getenv($key));
+            $this->assertNotFalse($value, $key . ' is not set in the runtime environment.');
+            $this->assertSame($want, $value, $key . ' did not match the configured repo secret.');
         }
     }
 }
