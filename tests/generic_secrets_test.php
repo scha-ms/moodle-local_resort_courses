@@ -30,7 +30,6 @@ namespace local_resort_courses;
  * @coversNothing
  */
 final class generic_secrets_test extends \advanced_testcase {
-
     /**
      * Ensure all four generic secret environment variables are set and non-empty.
      */
