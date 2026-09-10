@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Local plugin "resort courses" - Language pack.
+ * Local plugin "resort courses" - Language pack .
  *
  * @package    local_resort_courses
  * @copyright  2013 Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>

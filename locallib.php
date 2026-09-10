@@ -200,5 +200,3 @@ function resort_course_category($category, $cronrunning = false) {
     // If we have arrived here, the category should be sorted.
     return true;
 }
-
-// TEST-B code-change marker 20260910T1250Z
