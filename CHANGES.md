@@ -1,4 +1,4 @@
-moodle-local_resort_courses
+1moodle-local_resort_courses
 ===========================
 
 Changes
