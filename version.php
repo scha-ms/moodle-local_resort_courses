@@ -30,7 +30,3 @@ $plugin->release = 'v5.1-r1';
 $plugin->requires = 2025100600;
 $plugin->supported = [501, 501];
 $plugin->maturity = MATURITY_STABLE;
-
-// Code-change CI test 20260910T110752Z.
-
-// TEST-B code-change CI 20260910T112056Z
