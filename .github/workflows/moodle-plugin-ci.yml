@@ -16,6 +16,6 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@cancel-jobs-same-codebase
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@check-ide-development-artefacts
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
