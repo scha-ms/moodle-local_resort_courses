@@ -179,3 +179,5 @@ It was contributed to the Moodle an Hochschulen e.V. plugin catalogue in 2022.
 <!-- skip-non-code CI test 20260910T105416Z -->
 
 <!-- latest skip-non-code test 20260910T110711Z -->
+
+<!-- TEST-A docs-only expect skip 20260910T114223Z -->
