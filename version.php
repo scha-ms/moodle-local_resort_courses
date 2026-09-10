@@ -30,3 +30,5 @@ $plugin->release = 'v5.1-r1';
 $plugin->requires = 2025100600;
 $plugin->supported = [501, 501];
 $plugin->maturity = MATURITY_STABLE;
+
+// concurrency auto-cancel probe 20260910T150944Z
