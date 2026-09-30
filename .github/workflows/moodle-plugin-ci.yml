@@ -16,6 +16,7 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@check-ide-development-artefacts
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@deduplicate-run-verify
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
+      behat-slices: 2
