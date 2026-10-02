@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# Verify that same-named branches in different repositories do not cancel each other.
+# Fork side of the same-named branch isolation test.
 
 on:
   push:
