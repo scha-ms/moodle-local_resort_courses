@@ -2,8 +2,8 @@
 
   on:
     push:
-      branches: ['**']
-      tags-ignore: ['**']
+      tags:
+        - v*
     workflow_dispatch:
       inputs:
         tag:
@@ -12,6 +12,8 @@
 
   jobs:
     release:
-      uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@cancel-jobs-same-codebase
+      uses: moodle-an-hochschulen/moodle-workflows/.github/workflows/moodle-release.yml@main
+      with:
+        tag: ${{ inputs.tag }}
       secrets:
         MOODLE_ORG_TOKEN: ${{ secrets.MOODLE_ORG_TOKEN }}
