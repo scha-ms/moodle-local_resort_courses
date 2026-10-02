@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# CI deduplication test: attempt 2.
+# CI deduplication test: attempt 3.
 
 on:
   push:
