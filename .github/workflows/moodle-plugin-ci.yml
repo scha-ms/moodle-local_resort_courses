@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# PR #16 review retest: round 2 (source repository included in concurrency).
+# PR #16 review retest: round 3 (source repository included in concurrency).
 
 on:
   push:
