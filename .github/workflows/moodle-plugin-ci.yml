@@ -1,5 +1,7 @@
 name: Moodle Plugin CI
 
+# PR #16 review retest: round 1 (source repository included in concurrency).
+
 on:
   push:
     branches: ['**']
