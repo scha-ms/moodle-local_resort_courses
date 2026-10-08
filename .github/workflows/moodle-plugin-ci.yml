@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# Current PR head retest: attempt 3.
+# Test non-code skipping at the exact workflow revision.
 
 on:
   push:
@@ -18,7 +18,7 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@5b60adf0988f5069cd5ba971c20a318de54dd902
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@bfe2d029411c040485f7a14268c124629c1bfca6
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
     secrets:
