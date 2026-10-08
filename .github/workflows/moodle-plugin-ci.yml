@@ -18,6 +18,6 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@cancel-jobs-same-codebase
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@5b60adf0988f5069cd5ba971c20a318de54dd902
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
