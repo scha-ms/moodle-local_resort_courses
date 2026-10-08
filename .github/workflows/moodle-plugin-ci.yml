@@ -22,6 +22,10 @@ jobs:
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
       pr-check-body-contains: CI-SKIP-TEST
+      non-code-paths: |
+        README.md
+        CHANGES.md
+        docs/ci-test-guide.md
     secrets:
       GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
       GENERIC_PASSWORD_1: ${{ secrets.GENERIC_PASSWORD_1 }}
