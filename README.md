@@ -176,3 +176,5 @@ Alexander Bias
 It was contributed to the Moodle an Hochschulen e.V. plugin catalogue in 2022.
 
 <!-- Verify documentation-only CI skipping at workflow bfe2d02. -->
+
+<!-- Retest default documentation skipping with configurable paths. -->
