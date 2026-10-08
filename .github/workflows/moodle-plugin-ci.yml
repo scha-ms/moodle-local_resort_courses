@@ -18,9 +18,10 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@bfe2d029411c040485f7a14268c124629c1bfca6
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@a62ea3bc288a1c1f4136d63d816dc5bf8b3d28f6
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
+      pr-check-body-contains: CI-SKIP-TEST
     secrets:
       GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
       GENERIC_PASSWORD_1: ${{ secrets.GENERIC_PASSWORD_1 }}
