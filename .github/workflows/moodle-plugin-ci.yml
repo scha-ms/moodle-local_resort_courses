@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# Current PR head retest: attempt 1.
+# Current PR head retest: attempt 2.
 
 on:
   push:
