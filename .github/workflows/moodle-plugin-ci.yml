@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: read
       actions: write
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@d310a094b83d6a623772a7ce09b94ab27afa9256
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@e74df7f18904b1834723778e36d315dfe4958239
     with:
       concurrency-extended: true
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
