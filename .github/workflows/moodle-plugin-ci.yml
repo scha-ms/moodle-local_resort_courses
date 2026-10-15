@@ -1,11 +1,9 @@
 name: Moodle Plugin CI
 
-# Current PR head retest: attempt 3.
+# Test opt-in preflight cancellation at the exact PR revision.
 
 on:
   push:
-    branches: ['**']
-    tags-ignore: ['**']
   pull_request:
   workflow_dispatch:
     inputs:
@@ -18,8 +16,12 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@5b60adf0988f5069cd5ba971c20a318de54dd902
+    permissions:
+      contents: read
+      actions: write
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@d310a094b83d6a623772a7ce09b94ab27afa9256
     with:
+      concurrency-extended: true
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
     secrets:
       GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
