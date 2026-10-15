@@ -1,9 +1,9 @@
 name: Moodle Plugin CI
 
+# Verify unchanged defaults without new inputs or write permissions.
+
 on:
   push:
-    branches: ['**']
-    tags-ignore: ['**']
   pull_request:
   workflow_dispatch:
     inputs:
@@ -16,6 +16,11 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@cancel-jobs-same-codebase
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@e74df7f18904b1834723778e36d315dfe4958239
     with:
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
+    secrets:
+      GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
+      GENERIC_PASSWORD_1: ${{ secrets.GENERIC_PASSWORD_1 }}
+      GENERIC_USERNAME_2: ${{ secrets.GENERIC_USERNAME_2 }}
+      GENERIC_PASSWORD_2: ${{ secrets.GENERIC_PASSWORD_2 }}
