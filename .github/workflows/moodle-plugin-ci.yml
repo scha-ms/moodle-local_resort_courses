@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# Test opt-in preflight cancellation at the exact PR revision.
+# No concurrency-extended input: enable through the repository variable only.
 
 on:
   push:
@@ -21,7 +21,6 @@ jobs:
       actions: write
     uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@e74df7f18904b1834723778e36d315dfe4958239
     with:
-      concurrency-extended: true
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
     secrets:
       GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
