@@ -1,6 +1,6 @@
 name: Moodle Plugin CI
 
-# No concurrency-extended input: enable through the repository variable only.
+# Test preflight cancellation permissions: read
 
 on:
   push:
@@ -18,9 +18,9 @@ jobs:
   moodle-plugin-ci:
     permissions:
       contents: read
-      actions: write
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@e74df7f18904b1834723778e36d315dfe4958239
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@5f7a82b92f7032c66aab00931f06df7dd7c514ed
     with:
+      concurrency-extended: true
       moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
     secrets:
       GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
