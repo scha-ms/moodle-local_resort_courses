@@ -1,25 +1,22 @@
 name: Moodle Plugin CI
 
-# Test preflight cancellation permissions: default
-
 on:
   push:
+    branches: ['test-non-code-action-*']
   pull_request:
+    types: [opened, synchronize, reopened, edited]
   workflow_dispatch:
-    inputs:
-      moodle-core-branch:
-        description: 'Moodle core branch to test against (if not provided, the branch will be auto-detected)'
-        required: false
-        type: string
-  repository_dispatch:
-    types: [moodle-plugin-ci]
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@5f7a82b92f7032c66aab00931f06df7dd7c514ed
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@21fe0d6dae32d188c7c159c127a871bfb86fa5e4
     with:
-      concurrency-extended: true
-      moodle-core-branch: ${{ inputs.moodle-core-branch || github.event.client_payload.moodle-core-branch }}
+      moodle-core-branch: MOODLE_501_STABLE
+      pr-check-body-contains: CI-TEST
+      non-code-paths: |
+        README.md
+        CHANGES.md
+        docs/action-test-guide.md
     secrets:
       GENERIC_USERNAME_1: ${{ secrets.GENERIC_USERNAME_1 }}
       GENERIC_PASSWORD_1: ${{ secrets.GENERIC_PASSWORD_1 }}
