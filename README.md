@@ -174,3 +174,5 @@ Communication and Information Centre (kiz)\
 Alexander Bias
 
 It was contributed to the Moodle an Hochschulen e.V. plugin catalogue in 2022.
+
+CI action extraction documentation test.
