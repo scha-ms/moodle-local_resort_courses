@@ -7,6 +7,6 @@ on:
 
 jobs:
   moodle-plugin-ci:
-    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@2b9416dbd7f937121969caa3db20cab79ccfe9e2
+    uses: scha-ms/moodle-workflows/.github/workflows/moodle-plugin-ci.yml@de2c376d0a25f750d1608050e30bde16b695c8c3
     with:
       moodle-core-branch: MOODLE_501_STABLE
